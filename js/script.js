@@ -31,10 +31,12 @@ function showNews(data){
     news.map(number => {
         container.innerHTML += `
         <br>
-        <img style="max-width:800px" src=${number.urlToImage} href=${number.url}><br>
+        <div style="max-width:800px">
+        <a href=${number.url}><img style="max-width:800px" src=${number.urlToImage}></a><br>
         <h1>${number.title}</h1>
         <h2>${number.description}</h2>
-        <h3>${number.publishedAt}</h2>
+        <p>${number.publishedAt}</p>
+        </div>
         `
     })
 };
